@@ -1,0 +1,129 @@
+.logoVenue{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: rgba(74, 68, 68, 0.25);
+    height: 85vh;
+    width: auto;
+    padding: 0.5%;
+    border-radius: 10px;
+}
+.logoBox {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 90vh;
+    width: 70vw;
+}
+.VenueBox {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.logoVenue img {
+    height: 97%;
+    margin: 1%;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+.logoVenue img:hover {
+    height: 98%;
+    margin: 1%;
+}
+
+.Name {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 3%;
+    padding: 5px;
+    margin: 10px;
+}
+.Name h1 {
+    font-size: 50px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.infoBoxAll {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 72%;
+}
+.infoBox {
+    background-color: rgba(74, 68, 68, 0.25);
+    padding: 15px;
+    border-radius: 10px;
+    transition: 500ms;
+    border: #131212 1px solid;
+    width: 35vw;
+    opacity: 0.7;
+    margin-right: 1%;
+}
+
+.infoBox:hover {
+    background-color: rgba(60, 55, 55, 0.56);
+    border: #ffffff 1px solid;
+    opacity: 1;
+}
+.infoBox h2{
+    font-size: 25px;
+    margin-top: 5px;
+    height: auto;
+}
+.map img {
+    width: 35vw;
+    border: black 2px solid;
+}
+.info {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.descriptionBox {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 30px 0 30px 0;
+    height: 25vh;
+}
+.infoDescription{
+    width: 70%;
+    background-color: rgba(74, 68, 68, 0.25);
+    padding: 15px;
+    border-radius: 10px;
+    transition: 500ms;
+    border: #131212 1px solid;
+    opacity: 0.7;
+}
+.infoDescription:hover {
+    background-color: rgba(60, 55, 55, 0.56);
+    border: #ffffff 1px solid;
+    opacity: 1;
+}
+.starBox {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 72%;
+    background-color: rgba(74, 68, 68, 0.25);
+    border-radius: 10px;
+    transition: 500ms;
+    border: #131212 1px solid;
+    opacity: 0.7;
+}
+.starBox:hover {
+    background-color: rgba(60, 55, 55, 0.56);
+    border: #ffffff 1px solid;
+    opacity: 1;
+}
+.infoStar {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 30px;
+}
+.starBox h2 {
+margin-top: 15px;
+}

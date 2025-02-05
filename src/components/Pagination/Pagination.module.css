@@ -1,0 +1,33 @@
+.Pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0;
+    border-radius: 10px;
+}
+
+.button {
+    background-color: rgb(19, 18, 18);
+    color: snow;
+    padding: 10px 15px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgb(185, 9, 9);
+}
+
+.button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.active {
+    background-color: #ffffff;
+    color: #131212;
+}
+.ellipsis {
+    margin: 0 10px 0 5px;
+    color: rgb(43,77,142);
+}
