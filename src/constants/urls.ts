@@ -1,15 +1,24 @@
 const baseUrl = '';
 
+const auth = '/auth'
+const users = '/users'
+
 const urls = {
-    venues: {
-        base: `${baseUrl}/discover/venues`
+    signboard: {
+        base: `${baseUrl}/signboard`
     },
     venuesDetails: {
-        venuesById: (id: string): string => `${baseUrl}/venues/${id}`
+        venuesById: (id: string): string => `${baseUrl}/signboard/${id}`
     },
     search: {
-        base: `${baseUrl}/search/venues`
+        base: `${baseUrl}/search/signboard`
     },
+    auth: {
+        login:auth,
+        refresh:`${auth}/refresh`,
+        register:users,
+        me:`${auth}/me`
+    }
 };
 export {
     baseUrl,

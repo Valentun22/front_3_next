@@ -1,9 +1,9 @@
 import {AxiosResponse} from "axios";
-import {store} from "@/redux/slices/store/store";
+import {setupStore} from "@/redux/store/store";
 
 type IPromise<T> = Promise<AxiosResponse<T>>;
-type RootState = ReturnType<typeof store.getState>
-type AppDispatch = typeof store.dispatch
+type RootState = ReturnType<typeof setupStore.getState>
+type AppDispatch = typeof setupStore.dispatch
 
 export type {
     RootState,

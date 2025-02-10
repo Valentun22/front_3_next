@@ -1,0 +1,53 @@
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boxAuth {
+    width: 14.3%;
+    justify-content: space-between;
+    margin-right: 3%;
+}
+.boxAuthLogo {
+    width: 7%;
+}
+.boxAuthLogo button {
+    width: 100%;
+    height: 32px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 500ms;
+    font-size: 1vw;
+}
+.boxAuth button {
+    width: 47%;
+    height: 32px;
+    justify-content: space-between;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 500ms;
+    font-size: 1vw;
+}
+.buttonOne {
+    background-color: rgba(193, 138, 102, 0.96);
+    border: rgba(193, 138, 102, 0.96) 3px solid;
+    margin-right: 1vw;
+}
+.buttonOne:hover {
+    background-color: rgba(138, 98, 72, 0.96);
+    border: rgba(138, 98, 72, 0.96) 3px solid;
+}
+.buttonTwo {
+    background-color: rgba(44, 44, 44, 1);
+    border: rgba(44, 44, 44, 1) 3px solid;
+    color: rgba(193, 138, 102, 0.96);
+}
+.buttonTwo:hover {
+    background-color: rgb(19, 18, 18);;
+    border: rgba(138, 98, 72, 0.45) 3px solid;
+    color: white;
+}
+.boxAuthLogoOut {
+    padding-right: 2.5vw;
+    margin-left: -5.7%;
+}

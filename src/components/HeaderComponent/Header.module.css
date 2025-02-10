@@ -33,35 +33,3 @@
     background-color: rgba(193, 138, 102, 0.96);
     color: rgb(255, 255, 255);
 }
-.boxAuth {
-    width: 14.3%;
-    justify-content: space-between;
-    margin-right: 3%;
-}
-.boxAuth button {
-    width: 47%;
-    height: 32px;
-    justify-content: space-between;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 500ms;
-    font-size: 1vw;
-}
-.buttonOne {
-    background-color: rgba(193, 138, 102, 0.96);
-    border: rgba(193, 138, 102, 0.96) 3px solid;
-}
-.buttonOne:hover {
-    background-color: rgba(138, 98, 72, 0.96);
-    border: rgba(138, 98, 72, 0.96) 3px solid;
-}
-.buttonTwo {
-    background-color: rgba(44, 44, 44, 1);
-    border: rgba(44, 44, 44, 1) 3px solid;
-    color: rgba(193, 138, 102, 0.96);
-}
-.buttonTwo:hover {
-    background-color: rgb(19, 18, 18);;
-    border: rgba(138, 98, 72, 0.45) 3px solid;
-    color: white;
-}

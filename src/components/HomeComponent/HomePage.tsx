@@ -1,5 +1,7 @@
+"use client";
+
 import css from './HomePage.module.css';
-import {FC} from "react";
+import {FC, useEffect} from "react";
 import Image from "next/image";
 import img2 from '../../img/img2.png'
 import img3 from '../../img/img3.png'
@@ -11,8 +13,11 @@ import img8 from '../../img/img8.png'
 import img9 from '../../img/img9.png'
 import img10 from '../../img/img10.png'
 import img11 from '../../img/img11.png'
+import {useRouter} from "next/navigation";
 
-const HomePage: FC = async () => {
+const HomePage: FC = () => {
+    const router = useRouter();
+
     return (
     <div>
                 {/*Article One*/}
@@ -26,7 +31,7 @@ const HomePage: FC = async () => {
                     <Image src={img3} alt={"img"}/>
                     <h4>Швидко й легко знайти всі необхідні контакти закладів</h4>
                 </div>
-                <button>Пошук закладів</button>
+                <button onClick={() => router.push("/signboard")}>Пошук закладів</button>
             </div>
 
             <div className={css.boxTwoArticleOne}>
@@ -35,13 +40,13 @@ const HomePage: FC = async () => {
         </div>
 
                  {/*Article Two*/}
-        <div className={`${css.articleTwo} ${css.flex}`}>
+        <div id="about-section" className={`${css.articleTwo} ${css.flex}`}>
             <div className={css.boxOneArticleTwo}>
                 <div className={css.boxOneArticleTwoInfo}>
                     <h2>Про нас</h2>
                     <Image src={img3} alt={"img"}/>
                     <h3>Уявіть собі систему, де вся необхідна інформація знаходиться на відстані витягнутої руки. Вам не доведеться блукати лабіринтами меню чи витрачати час на пошук потрібних контактів. Це все про наш сайт.</h3>
-                    <button>Контакти</button>
+                    <button onClick={() => router.push("/contacts")}>Контакти</button>
                 </div>
             </div>
             <div className={css.boxTwoArticleTwo}>

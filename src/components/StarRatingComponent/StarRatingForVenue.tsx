@@ -1,7 +1,6 @@
-"use client"
 import React from 'react';
 import {StarRating} from 'star-rating-react-ts';
-import css from './StarRatingForMovie.module.css';
+import css from './StarRatingForVenue.module.css';
 
 interface IProps {
     rating: number;
@@ -12,7 +11,7 @@ const sizeStars= {
         backgroundColorActive: '#d82727',
         backgroundColorHover: '#0a3186'
     },
-    size: 40
+    size: 22
 };
 
 const StarRatingForVenue: React.FC<IProps> = ({rating}) => {
@@ -28,4 +27,6 @@ const StarRatingForVenue: React.FC<IProps> = ({rating}) => {
     );
 }
 
-export {StarRatingForVenue}
+export {
+    StarRatingForVenue
+}

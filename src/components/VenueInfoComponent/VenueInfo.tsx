@@ -2,8 +2,7 @@ import {IFeaturesInterface} from "@/components/VenueInfoComponent/interface/IFea
 import {ITypeVenueInterface} from "@/components/VenueInfoComponent/interface/ITypeVenueInterface";
 import {FC} from "react";
 import css from './VenueInfo.module.css';
-import {StarRatingForVenue} from "@/components/StarRatingComponent/StarRatingForMovie";
-
+import {StarRatingForVenue} from "@/components/StarRatingComponent/StarRatingForVenue";
 
 interface IProps{
     name?: string;

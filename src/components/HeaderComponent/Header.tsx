@@ -1,31 +1,35 @@
-import css from './Header.module.css';
-import {FC} from "react";
-import Link from "next/link";
-import Image from 'next/image';
-import img1 from '../../img/img1.png'
+"use client";
 
-const Header: FC = async () => {
+import css from './Header.module.css';
+import { FC } from "react";
+import { useRouter } from "next/navigation";
+import Image from 'next/image';
+import img1 from '../../img/img1.png';
+import Link from "next/link";
+import {NavigationLogin} from "@/components/HeaderComponent/NavigationLogin/NavigationLogin";
+
+const Header: FC = () => {
+    const router = useRouter();
+
     return (
         <div className={`${css.Header} ${css.flex}`}>
             <div className={css.logoBox}>
-              <Link href={"#"}>
-                  <Image src={img1} alt={"Logo"} layout="intrinsic"/>
-              </Link>
+                <Link href={"#"}>
+                    <Image src={img1} alt="Logo" layout="intrinsic" />
+                </Link>
             </div>
 
             <div className={`${css.infoBlock} ${css.flex}`}>
-                    <button>Про нас</button>
-                    <button>Головна</button>
-                    <button>Пошук</button>
-                    <button>Новини</button>
+                <button onClick={() => router.push("/#about-section")}>Про нас</button>
+                <button onClick={() => router.push("/")}>Головна</button>
+                <button onClick={() => router.push("/searchSignboards")}>Пошук</button>
+                <button onClick={() => router.push("/news")}>Новини</button>
             </div>
 
-            <div className={`${css.flex} ${css.boxAuth}`}>
-                    <button className={css.buttonOne}>Sign in</button>
-                    <button className={css.buttonTwo}>Register</button>
-            </div>
+            <NavigationLogin navLinks={[]} />
         </div>
+
     );
 };
 
-export {Header};
+export { Header };

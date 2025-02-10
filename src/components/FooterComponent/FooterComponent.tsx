@@ -3,9 +3,6 @@
 import css from "./FooterComponent.module.css";
 import Link from "next/link";
 
-const text = "Алкоголь шкодить здоров'ю у будь-якій дозі та спричиняє залежність!";
-const baseDuration = 1;
-
 const Footer = () => {
     return (
         <div className={css.footerBox}>

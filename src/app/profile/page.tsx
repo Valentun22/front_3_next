@@ -1,13 +1,15 @@
 import React from 'react'
 import {Header} from "@/components/HeaderComponent/Header";
-import {HomePage} from "@/components/HomeComponent/HomePage";
+import {Footer} from "@/components/FooterComponent/FooterComponent";
+import ProfileComponent from "@/components/ProfileComponent/ProfileComponent";
 
 const SignboardPage = () => {
   return (
 
       <div>
           <Header/>
-          <HomePage/>
+          <ProfileComponent/>
+          <Footer/>
       </div>
   )
 }

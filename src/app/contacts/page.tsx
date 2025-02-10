@@ -1,14 +1,13 @@
 import React from 'react'
 import {Header} from "@/components/HeaderComponent/Header";
 import {Footer} from "@/components/FooterComponent/FooterComponent";
-import {SignboardComponent} from "@/components/SignboardComponent/SignboardComponent";
+import {ContactsComponent} from "@/components/ContactsComponent/ContactsComponent";
 
 const SignboardPage = () => {
   return (
-
       <div>
           <Header/>
-          <SignboardComponent/>
+          <ContactsComponent/>
           <Footer/>
       </div>
   )

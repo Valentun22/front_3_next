@@ -15,7 +15,7 @@ axiosInstance.interceptors.request.use(request => {
 });
 
 const venueService = {
-    getAll: (page: number): IPromise<{ results: IVenueInterface[] }> => axiosInstance.get(urls.venues.base, {params: {page}}),
+    getAll: (page: number): IPromise<{ results: IVenueInterface[] }> => axiosInstance.get(urls.signboard.base, {params: {page}}),
     getByVenueId: (id: string): IPromise<IVenueInterface> => axiosInstance.get(urls.venuesDetails.venuesById(id))
 }
 
