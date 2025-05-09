@@ -1,11 +1,9 @@
-import {Header} from "@/components/HeaderComponent/Header";
 import React from "react";
-import {HomePage} from "@/components/HomeComponent/HomePage";
+import {HomePage} from "@/components/home-component/HomePage";
 
 export default function Home() {
     return (
         <div>
-            <Header/>
             <HomePage/>
         </div>
     );

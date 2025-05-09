@@ -1,0 +1,14 @@
+.ApplicationItem{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #872d2d;
+    padding: 20px;
+    width: 90vh;
+}
+.ApplicationLogo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

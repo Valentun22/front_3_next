@@ -1,8 +1,8 @@
-import {IVenueInterface} from "@/components/VenueInfoComponent/interface/IVenueInterface";
+import {IVenue} from "@/interface/IVenueInterface";
 
 export interface ISearchInterface {
     page: number;
-    results: IVenueInterface[];
+    results: IVenue[];
     total_pages: number;
     total_results: number;
 }

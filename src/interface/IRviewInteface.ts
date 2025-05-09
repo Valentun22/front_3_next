@@ -1,15 +1,16 @@
-import {IUser} from "@/interface/userInterface";
-import {IEstablishment} from "@/interface/IEstablishmentInterface";
+import {IUser} from "@/interface/IUserInterface";
+import {IVenue} from "@/interface/IVenueInterface";
 
 export interface IReview {
-    review_id: number,
+    reviewId: number,
     text: string,
+    signboardId: string;
     check: number|string,
-    user_id: number,
-    establishment_id: number,
+    userId: number,
+    venueId: number,
     rating: number,
     user?: IUser,
-    establishment?: IEstablishment,
+    venue?: IVenue,
     createdAt: string,
     updatedAt: string
 }

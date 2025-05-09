@@ -1,4 +1,4 @@
-const baseUrl = '';
+const baseUrl = 'http://localhost:8000';
 
 const auth = '/auth'
 const users = '/users'

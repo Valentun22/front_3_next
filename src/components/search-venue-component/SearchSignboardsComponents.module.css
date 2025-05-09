@@ -1,0 +1,9 @@
+.page {
+    width: 100vw;
+    height: 78vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(193, 138, 102);
+;
+}

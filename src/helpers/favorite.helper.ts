@@ -1,29 +1,26 @@
 import React, { RefObject } from "react";
-
-import {IEstablishment} from "@/interface/IEstablishmentInterface";
+import {IVenue} from "@/interface/IVenueInterface";
 import {favoriteService} from "@/services/favorite.service";
 
-const addToFavorite = async (e: React.MouseEvent<HTMLElement, MouseEvent>, favoriteIcon: React.RefObject<any>, user_id: number, item: IEstablishment) => {
+const addToFavorite = async (e: React.MouseEvent<HTMLElement, MouseEvent>, favoriteIcon: React.RefObject<any>, userId: number, item: IVenue) => {
     const color = favoriteIcon?.current?.style?.color === 'red';
 
     if (color && favoriteIcon && e.target) {
         favoriteIcon.current.style.setProperty('color', 'black');
-        await favoriteService.deleteFavorite(user_id, item?.establishment_id);
+        await favoriteService.deleteFavorite(userId, item?.venueId);
 
     } else if (!color && favoriteIcon.current && e.target) {
         favoriteIcon.current.style.setProperty('color', 'red');
-        await favoriteService.addUsersFavorite(user_id, item?.establishment_id);
+        await favoriteService.addUsersFavorite(userId, item?.venueId);
     }
 }
 
-async function changeFavorite(item: IEstablishment, favoriteIcon: RefObject<any>, user_id: number) {
+async function changeFavorite(item: IVenue, favoriteIcon: RefObject<any>, userId: number) {
     const {data:favorite} = await favoriteService.fetchFavorite();
 
-
-    if (favoriteIcon.current && favorite?.length && user_id) {
+    if (favoriteIcon.current && favorite?.length && userId) {
         favorite?.forEach(value => {
-
-            if (value?.establishment_id === item?.establishment_id && value?.user_id === user_id && favoriteIcon?.current) {
+            if (value?.venueId === item?.venueId && value?.userId === userId && favoriteIcon?.current) {
                 favoriteIcon.current.style.color = 'red';
             }
         })

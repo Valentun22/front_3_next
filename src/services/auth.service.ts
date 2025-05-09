@@ -1,5 +1,5 @@
 import {axiosInstance, IRes} from "./axios.service";
-import {IClientId, IUserAndTokens} from "@/interface/userInterface";
+import {IClientId, IUserAndTokens} from "@/interface/IUserInterface";
 
 const authService = {
     login: (clientId: IClientId): IRes<IUserAndTokens> => axiosInstance.post(`/users`, clientId),

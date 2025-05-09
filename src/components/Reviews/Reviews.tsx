@@ -5,16 +5,16 @@ import { useRouter } from "next/navigation";
 import styles from './Reviews.module.css';
 import ReactStars from 'react-stars';
 import { IReview } from "@/interface/IRviewInteface";
-import Review from "@/components/Reviews/Review/Review";
+import Review from "@/components/Reviews/review/Review";
 import { useAppSelector } from "@/hooks/useReduxHooks";
 import { reviewsService } from "@/services/reviews.service";
 
 interface IProp {
-    establishment_id: number | undefined;
+    signboardId: string | undefined;
 }
 
-const Reviews: FC<IProp> = ({ establishment_id }) => {
-    const { user } = useAppSelector(state => state.users);
+const Reviews: FC<IProp> = ({ signboardId }) => {
+    const { user } = useAppSelector(state => state.user);
     const router = useRouter();
 
     const [review, setReview] = useState<Partial<IReview>>({ text: '', check: '', rating: 0 });
@@ -26,8 +26,8 @@ const Reviews: FC<IProp> = ({ establishment_id }) => {
     const [fetchDelete, setFetchDelete] = useState<boolean | string>(false);
 
     useEffect(() => {
-        if (establishment_id && (fetchAdding || currentPage)) {
-            reviewsService.getAllByEstId(establishment_id, { page: currentPage, limit: 5, sort: 'created_at-DESC' })
+        if (signboardId && (fetchAdding || currentPage)) {
+            reviewsService.getAllByEstId(signboardId, { page: currentPage, limit: 5, sort: 'created_at-DESC' })
                 .then(({ data }) => {
                     setReviews(data.reviews);
                     setTotalCount(data.count);
@@ -35,11 +35,11 @@ const Reviews: FC<IProp> = ({ establishment_id }) => {
                 })
                 .finally(() => setFetchAdding(false));
         }
-    }, [establishment_id, fetchAdding, currentPage]);
+    }, [signboardId, fetchAdding, currentPage]);
 
     useEffect(() => {
-        if (establishment_id && fetchDelete) {
-            reviewsService.getAllByEstId(establishment_id, { page: currentPage, limit: 5, sort: 'created_at-DESC' })
+        if (signboardId && fetchDelete) {
+            reviewsService.getAllByEstId(signboardId, { page: currentPage, limit: 5, sort: 'created_at-DESC' })
                 .then(({ data }) => {
                     setReviews(data.reviews);
                     setTotalCount(data.count);
@@ -51,15 +51,15 @@ const Reviews: FC<IProp> = ({ establishment_id }) => {
 
     const createReview = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        if (user && establishment_id) {
-            const { user_id } = user;
-            reviewsService.postOne({ ...review, check: +review.check!, user_id, establishment_id })
+        if (user && signboardId) {
+            const { userId } = user;
+            reviewsService.postOne({ ...review, check: +review.check!, userId, signboardId })
                 .finally(() => {
                     setCurrentPage(1);
                     setFetchAdding(true);
                 });
         } else {
-            router.push(`/auth-request?establishment_id=${establishment_id}`);
+            router.push(`/auth-request?signboardId=${signboardId}`);
         }
     };
 
@@ -115,7 +115,7 @@ const Reviews: FC<IProp> = ({ establishment_id }) => {
 
             <div className={styles.Container}>
                 {reviews.length ? reviews.map(review => (
-                    <Review key={review.review_id} review={review} deleteItem={deleteItem} />
+                    <Review key={review.reviewId} review={review} deleteItem={deleteItem} />
                 )) : "No review yet"}
             </div>
 

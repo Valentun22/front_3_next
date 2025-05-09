@@ -1,14 +1,11 @@
 import React from 'react'
-import {Header} from "@/components/HeaderComponent/Header";
-import {Footer} from "@/components/FooterComponent/FooterComponent";
-import {ContactsComponent} from "@/components/ContactsComponent/ContactsComponent";
-import {SearchSignboardsComponents} from "@/components/SearchSignboardsComponents/SearchSignboardsComponents";
+import {Footer} from "@/components/Footer/FooterComponent";
+import {SearchSignboardsComponents} from "@/components/search-venue-component/SearchSignboardsComponents";
 
 const SignboardPage = () => {
   return (
 
       <div>
-          <Header/>
           <SearchSignboardsComponents/>
           <Footer/>
       </div>

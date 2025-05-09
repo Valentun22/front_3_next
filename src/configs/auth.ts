@@ -34,3 +34,5 @@ export const authConfig: AuthOptions = {
         })
     ]
 }
+
+//todo Facebook ще не реагує , хоча вказані ключі

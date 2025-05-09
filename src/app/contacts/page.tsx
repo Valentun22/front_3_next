@@ -1,12 +1,10 @@
 import React from 'react'
-import {Header} from "@/components/HeaderComponent/Header";
-import {Footer} from "@/components/FooterComponent/FooterComponent";
-import {ContactsComponent} from "@/components/ContactsComponent/ContactsComponent";
+import {Footer} from "@/components/Footer/FooterComponent";
+import {ContactsComponent} from "@/components/contacts-component/ContactsComponent";
 
 const SignboardPage = () => {
   return (
       <div>
-          <Header/>
           <ContactsComponent/>
           <Footer/>
       </div>

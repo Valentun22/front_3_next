@@ -1,5 +1,5 @@
 import {axiosInstance, IRes} from "./axios.service";
-import {IPutUser, IUser} from "@/interface/userInterface";
+import {IPutUser, IUser} from "@/interface/IUserInterface";
 
 const usersService = {
     getAll: (): IRes<IUser[]> => axiosInstance.get(`/users`),

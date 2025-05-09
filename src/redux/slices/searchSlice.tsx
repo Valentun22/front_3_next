@@ -1,11 +1,11 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import {AxiosError} from "axios";
 import {searchService} from "@/services/api.service";
-import {IVenueInterface} from "@/components/VenueInfoComponent/interface/IVenueInterface";
+import {IVenue} from "@/interface/IVenueInterface";
 
 interface IState {
     page: number | null;
-    venues: IVenueInterface[];
+    venues: IVenue[];
     total_pages: number | null;
     total_results: number | null;
 }

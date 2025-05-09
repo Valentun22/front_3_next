@@ -1,5 +1,5 @@
 import {createSlice, createAsyncThunk} from "@reduxjs/toolkit";
-import {IClientId, IUser} from "@/interface/userInterface";
+import {IClientId, IUser} from "@/interface/IUserInterface";
 import {authService} from "@/services/auth.service";
 
 interface IState {

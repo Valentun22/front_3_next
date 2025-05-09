@@ -1,12 +1,25 @@
 import {AxiosResponse} from "axios";
-import {setupStore} from "@/redux/store/store";
+import {combineReducers, configureStore} from "@reduxjs/toolkit";
+import {userReducer} from "@/redux/slices/userSlice";
+
+let establishmentReducer;
+const rootReducer = combineReducers({
+    userId: userReducer,
+    s: establishmentReducer
+});
+
+const setupStore = () => configureStore({
+    reducer:rootReducer
+})
 
 type IPromise<T> = Promise<AxiosResponse<T>>;
-type RootState = ReturnType<typeof setupStore.getState>
-type AppDispatch = typeof setupStore.dispatch
+export type RootState = ReturnType<typeof rootReducer>;
+export type AppStore = ReturnType<typeof setupStore>
+export type AppDispatch = AppStore['dispatch']
 
 export type {
-    RootState,
-    AppDispatch,
+
     IPromise
 }
+
+//todo потрібно виправити

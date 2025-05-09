@@ -1,8 +1,8 @@
 import axios from "axios";
 import {IPromise} from "@/types/reduxType";
 import {baseUrl, urls} from "@/constants/urls";
-import {IVenueInterface} from "@/components/VenueInfoComponent/interface/IVenueInterface";
 import {ISearchInterface} from "@/interface/ISearchInterface";
+import {IVenue} from "@/interface/IVenueInterface";
 
 const axiosInstance = axios.create({
     baseURL : baseUrl});
@@ -15,8 +15,8 @@ axiosInstance.interceptors.request.use(request => {
 });
 
 const venueService = {
-    getAll: (page: number): IPromise<{ results: IVenueInterface[] }> => axiosInstance.get(urls.signboard.base, {params: {page}}),
-    getByVenueId: (id: string): IPromise<IVenueInterface> => axiosInstance.get(urls.venuesDetails.venuesById(id))
+    getAll: (page: number): IPromise<{ results: IVenue[] }> => axiosInstance.get(urls.signboard.base, {params: {page}}),
+    getByVenueId: (id: string): IPromise<IVenue> => axiosInstance.get(urls.venuesDetails.venuesById(id))
 }
 
 const searchService = {

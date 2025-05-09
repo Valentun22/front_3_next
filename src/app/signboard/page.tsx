@@ -1,13 +1,11 @@
 import React from 'react'
-import {Header} from "@/components/HeaderComponent/Header";
-import {Footer} from "@/components/FooterComponent/FooterComponent";
-import {SignboardComponent} from "@/components/SignboardComponent/SignboardComponent";
+import {Footer} from "@/components/Footer/FooterComponent";
+import {SignboardComponent} from "@/components/signboard-component/SignboardComponent";
 
 const SignboardPage = () => {
   return (
 
       <div>
-          <Header/>
           <SignboardComponent/>
           <Footer/>
       </div>

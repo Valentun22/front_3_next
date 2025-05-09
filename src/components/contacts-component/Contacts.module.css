@@ -1,0 +1,98 @@
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url("https://wallpaper.forfun.com/fetch/6a/6af549ad3139ec46315f0d55364a82c2.jpeg");
+    object-fit: cover;
+    object-position: center;
+}
+.between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pageTitle {
+    height: 10vh;
+    font-size: 1.75vw;
+    color: rgba(53, 53, 55, 1);
+}
+.boxInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+.imgBox {
+    height: 100%;
+    width: 40vh;
+}
+.imgBox img{
+    height: 100%;
+    width: 38vh;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 3% 0 9%;
+    transition: 1200ms;
+    border-radius: 5px;
+}
+.imgBox img:hover{
+    height: 95%;
+    width: 34vh;
+    border-radius: 10px;
+    border: rgba(0, 0, 0, 0.52) 2px solid;
+}
+.contactsBox{
+    width: 50vw;
+}
+.boxOne {
+    height: 45vh;
+    width: 75%;
+    background-color: #ffaa22;
+    margin-bottom: 3vh;
+    border-radius: 5px;
+    background-color: rgba(53, 53, 55, 0.95);
+    color: rgba(193, 138, 102);
+    transition: 400ms;
+    border: rgba(53, 53, 55, 0.95) 2px solid;
+}
+.boxOne:hover {
+    background-color: rgba(53, 53, 55, 0.99);
+    border: rgba(255, 255, 255, 0.31) 2px solid;
+}
+.boxTwo {
+    height: 45vh;
+    width: 75%;
+    background-color: darkolivegreen;
+    margin-bottom: 3vh;
+    border-radius: 5px;
+    background-color: rgba(53, 53, 55, 0.95);
+    color: rgba(193, 138, 102);
+    transition: 400ms;
+    border: rgba(53, 53, 55, 0.95) 2px solid;
+}
+.boxTwo:hover {
+    background-color: rgba(53, 53, 55, 0.99);
+    border: rgba(255, 255, 255, 0.31) 2px solid;
+}
+.contactsInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-left: 3%;
+}
+.contactsInfoName{
+    margin: 0 0 3% 3%;
+    font-size: 1.55vw;
+}
+.contactsInfo h3{
+    margin-bottom: 2%;
+    font-size: 1.2vw;
+}
